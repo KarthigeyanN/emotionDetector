@@ -18,7 +18,7 @@ def sent_analyzer():
         score for the provided text.
     '''
     text_to_analyze = request.args.get('textToAnalyze')
-    if len(text_to_analyze) == 0 :
+    if not text_to_analyze:
         return "Invalid input! Try again"
     sentiment = ed.emotion_detector(text_to_analyze)
     return " For the given statement, the system response is " \
