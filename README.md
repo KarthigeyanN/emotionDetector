@@ -5,4 +5,4 @@ The function emotion_detector in the python program emotion_detection.py
 is the key which uses IBM-Watson api to submit a given text and receive 
 the response 
 The emotions expressed by the statements are classified into 5 categories
-such as anger, fear, disgust, anger and sadness.
+such as joy, fear, disgust, anger and sadness.
