@@ -22,4 +22,6 @@ def emotion_detector(text_to_analyse):
         v['dominant_emotion'] = max(v, key=v.get)
         return v
     except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 400:
+            print("Caught 400 Bad Request")
         return "Error: " + str(e)
