@@ -19,7 +19,7 @@ def sent_analyzer():
     '''
     text_to_analyze = request.args.get('textToAnalyze')
     if len(text_to_analyze) == 0 :
-        return "The input is empty"
+        return "Invalid input! Try again"
     sentiment = ed.emotion_detector(text_to_analyze)
     return " For the given statement, the system response is " \
         + " , ".join([f"'{s}': {sentiment[s]}" \
